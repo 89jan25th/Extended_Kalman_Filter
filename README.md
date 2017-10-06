@@ -1,5 +1,48 @@
-# Extended Kalman Filter Project Starter Code
+# Extended Kalman Filter Project
 Self-Driving Car Engineer Nanodegree Program
+
+## Topics in rubric
+
+### 1. Your code should compile.
+
+My result code compiles as instructed.
+![alt text](./img/dataset_1.png "dataset 1")
+![alt text](./img/dataset_2.png "dataset 1")
+
+
+### 2. px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52] when using the file: "obj_pose-laser-radar-synthetic-input.txt which is the same data file the simulator uses for Dataset 1"
+
+My result has the RMSE within the criteria.
+
+### 3. Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
+
+My result works in accordance with the instruction. Below is the instruction from the course.
+
+1) Main.cpp reads in the data and sends a sensor measurement to FusionEKF.cpp
+2) FusionEKF.cpp takes the sensor data and initializes variables and updates variables. The Kalman filter equations are not in this file. FusionEKF.cpp has a variable called ekf_, which is an instance of a KalmanFilter class. The ekf_ will hold the matrix and vector values. You will also use the ekf_ instance to call the predict and update equations.
+3) The KalmanFilter class is defined in kalman_filter.cpp and kalman_filter.h. You will only need to modify 'kalman_filter.cpp', which contains functions for the prediction and update steps.
+
+### 3. Your Kalman Filter algorithm handles the first measurements appropriately.
+
+My result code receives the first measurements from main.cpp and initialize variables. The code is in FusionEKF.cpp line 69 ~ 111.
+
+### 4. Your Kalman Filter algorithm first predicts then updates.
+
+My code does prediction first by calling ekf_.Predicts() (in 141, FusionEKF.cpp) and then does update by calling ekf_.UpdateEKF (in 158 and 164, FusionEKF.cpp)
+
+### 5. Your Kalman Filter can handle radar and lidar measurements.
+
+My code set variables for matrix X separately by measurement_pack.sensor_type_ (in 87~ 111, FusionEKF.cpp)
+
+### 6. Your algorithm should avoid unnecessary calculations.
+
+I reviewed my code and checked if any part in my code does repeated or unnecessary calculations.
+
+### 7. Side notes
+
+I adjusted (2,2) component of R matrix for radar from 0.0009 to 0.0006 since it worked better. 
+
+=========================================================================================
 
 In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
