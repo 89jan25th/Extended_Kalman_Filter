@@ -41,7 +41,7 @@ I reviewed my code and checked if any part in my code does repeated or unnecessa
 
 I adjusted (2,2) component of R matrix for radar from 0.0009 to 0.0006 since it worked better. 
 
-=========================================================================================
+---
 
 In this project you will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
