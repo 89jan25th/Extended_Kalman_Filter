@@ -6,13 +6,12 @@ Self-Driving Car Engineer Nanodegree Program
 ### 1. Your code should compile.
 
 My result code compiles as instructed.
-![alt text](./img/dataset_1.png "dataset 1")
-![alt text](./img/dataset_2.png "dataset 1")
-
 
 ### 2. px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52] when using the file: "obj_pose-laser-radar-synthetic-input.txt which is the same data file the simulator uses for Dataset 1"
 
 My result has the RMSE within the criteria.
+![alt text](./img/dataset_1.png "dataset 1") 
+![alt text](./img/dataset_2.png "dataset 1")
 
 ### 3. Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.
 
